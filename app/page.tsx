@@ -9,7 +9,11 @@ const inter = Inter({ subsets: ['latin'] })
 const getData = async () => {
   const data = await prisma.category.findMany({
     include: {
-      CategoriesOnExpenses: true
+      CategoriesOnExpenses: {
+        include: {
+          Expense: true
+        }
+      }
     }
   })
   return JSON.parse(JSON.stringify(data));

@@ -11,13 +11,13 @@ const Comp = ({data}:any) => {
           <div key={item.id}>
             <h1>{item.name}</h1>
             <ul>
-              {/* {item.CategoriesOnExpenses.map((item:any) => {
+              {item.CategoriesOnExpenses.map((item:any) => {
                 return (
                   <li key={item.id}>
                     <p>{item.Expense.amount}</p>
                   </li>
                 )
-              })} */}
+              })}
             </ul>
           </div>
         )
